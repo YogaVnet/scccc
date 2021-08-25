@@ -2,10 +2,9 @@
 # Debian 9 & 10 64bit
 # Ubuntu 18.04 & 20.04 bit
 # Centos 7 & 8 64bit 
-# ==================================================
 
 VPN_IPSEC_PSK='fortex'
-VPN_USER='bokir'
+VPN_USER='fortex'
 VPN_PASSWORD='1'
 NET_IFACE=$(ip -o $NET_IFACE -4 route show to default | awk '{print $5}');
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
@@ -278,14 +277,14 @@ mkdir -p /run/pluto
 service fail2ban restart 2>/dev/null
 service ipsec restart 2>/dev/null
 service xl2tpd restart 2>/dev/null
-wget -O /usr/bin/addl2tp https://raw.githubusercontent.com/YogaVnet/sc/main/ipsec/addl2tp.sh && chmod +x /usr/bin/addl2tp
-wget -O /usr/bin/dell2tp https://raw.githubusercontent.com/YogaVnet/sc/main/ipsec/dell2tp.sh && chmod +x /usr/bin/dell2tp
-wget -O /usr/bin/xp-l2tp https://raw.githubusercontent.com/YogaVnet/sc/main/ipsec/xp-l2tp.sh && chmod +x /usr/bin/xp-l2tp
-wget -O /usr/bin/addpptp https://raw.githubusercontent.com/YogaVnet/sc/main/ipsec/addpptp.sh && chmod +x /usr/bin/addpptp
-wget -O /usr/bin/delpptp https://raw.githubusercontent.com/YogaVnet/sc/main/ipsec/delpptp.sh && chmod +x /usr/bin/delpptp
-wget -O /usr/bin/xp-pptp https://raw.githubusercontent.com/YogaVnet/sc/main/ipsec/xp-pptp.sh && chmod +x /usr/bin/xp-pptp
-wget -O /usr/bin/renewpptp https://raw.githubusercontent.com/YogaVnet/sc/main/ipsec/renewpptp.sh && chmod +x /usr/bin/renewpptp
-wget -O /usr/bin/renewl2tp https://raw.githubusercontent.com/YogaVnet/sc/main/ipsec/renewl2tp.sh && chmod +x /usr/bin/renewl2tp
+wget -O /usr/bin/addl2tp https://raw.githubusercontent.com/YogaVnet/sc/main/vpn/addl2tp.sh && chmod +x /usr/bin/addl2tp
+wget -O /usr/bin/dell2tp https://raw.githubusercontent.com/YogaVnet/sc/main/vpn/dell2tp.sh && chmod +x /usr/bin/dell2tp
+wget -O /usr/bin/xp-l2tp https://raw.githubusercontent.com/YogaVnet/sc/main/vpn/xp-l2tp.sh && chmod +x /usr/bin/xp-l2tp
+wget -O /usr/bin/addpptp https://raw.githubusercontent.com/YogaVnet/sc/main/vpn/addpptp.sh && chmod +x /usr/bin/addpptp
+wget -O /usr/bin/delpptp https://raw.githubusercontent.com/YogaVnet/sc/main/vpn/delpptp.sh && chmod +x /usr/bin/delpptp
+wget -O /usr/bin/xp-pptp https://raw.githubusercontent.com/YogaVnet/sc/main/vpn/xp-pptp.sh && chmod +x /usr/bin/xp-pptp
+wget -O /usr/bin/renewpptp https://raw.githubusercontent.com/YogaVnet/sc/main/vpn/renewpptp.sh && chmod +x /usr/bin/renewpptp
+wget -O /usr/bin/renewl2tp https://raw.githubusercontent.com/YogaVnet/sc/main/vpn/renewl2tp.sh && chmod +x /usr/bin/renewl2tp
 touch /var/lib/premium-script/data-user-l2tp
 touch /var/lib/premium-script/data-user-pptp
 rm -f /root/ipsec.sh
