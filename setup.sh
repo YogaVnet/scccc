@@ -19,14 +19,14 @@ echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
 wget https://raw.githubusercontent.com/YogaVnet/sc/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 wget https://raw.githubusercontent.com/YogaVnet/sc/vpn/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #installwg
-wget https://raw.githubusercontent.com/YogaVnet/sc/wg/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget https://raw.githubusercontent.com/YogaVnet/sc/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install ssr
-wget https://raw.githubusercontent.com/YogaVnet/sc/ssr/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget https://raw.githubusercontent.com/YogaVnet/sc/sdw/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget https://raw.githubusercontent.com/YogaVnet/sc/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget https://raw.githubusercontent.com/YogaVnet/sc/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #install v2ray
-wget https://raw.githubusercontent.com/YogaVnet/sc/vray/ins-vt.sh && chmod +x ins-vt.sh && sed -i -e 's/\r$//' ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget https://raw.githubusercontent.com/YogaVnet/sc/main/ins-vt.sh && chmod +x ins-vt.sh && sed -i -e 's/\r$//' ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #install L2TP
-wget https://raw.githubusercontent.com/YogaVnet/sc/ipsec/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget https://raw.githubusercontent.com/YogaVnet/sc/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
